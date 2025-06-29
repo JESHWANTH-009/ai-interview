@@ -7,10 +7,9 @@ import axios from 'axios';
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; // <--- Changed here
 
 // Optional: Add a warning if the API_BASE_URL is not set during development
-if (!API_BASE_URL) {
+if (!API_BASE_URL){
     console.warn('API_BASE_URL is not set. Make sure to configure VITE_API_BASE_URL in your .env file or Vercel environment variables.'); // <--- Changed here
 }
-
 const api = axios.create({
     baseURL: API_BASE_URL,
     headers: {
