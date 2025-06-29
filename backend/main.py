@@ -14,7 +14,7 @@ FRONT_END_API = os.getenv("FRONT_END_API")
 
 origins = [
     # React app development server
-    "ai-interview-abxl9o7sb-jeshwanths-projects-de4ac3ee.vercel.app",  # For cases where browser uses localhost
+    "ai-interview-abxl9o7sb-jeshwanths-projects-de4ac3ee.vercel.app" # For cases where browser uses localhost
     # Add your deployed frontend URL here when you deploy, e.g., "https://your-frontend-app.vercel.app"
 ]
 app.add_middleware(
