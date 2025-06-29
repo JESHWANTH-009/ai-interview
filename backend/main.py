@@ -10,12 +10,12 @@ import os
 app = FastAPI()
 
 FRONT_END_API = os.getenv("FRONT_END_API")
-FRONT_END_LOCAL = os.getenv("FRONT_END_LOCAL")
+
 
 origins = [
     # React app development server
     "ai-interview-abxl9o7sb-jeshwanths-projects-de4ac3ee.vercel.app",  # For cases where browser uses localhost
-    FRONT_END_LOCAL,# Add your deployed frontend URL here when you deploy, e.g., "https://your-frontend-app.vercel.app"
+    # Add your deployed frontend URL here when you deploy, e.g., "https://your-frontend-app.vercel.app"
 ]
 app.add_middleware(
     CORSMiddleware,
