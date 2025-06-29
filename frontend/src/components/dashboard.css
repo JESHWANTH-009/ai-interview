@@ -1,0 +1,280 @@
+/* frontend/src/components/dashboard.css */
+
+/* General page background - a subtle gradient */
+.dashboard-background {
+    background: linear-gradient(135deg, #e0f2f7, #f3e5f5, #e0f7fa); /* Light sky blue, light purple, slightly lighter sky blue */
+    min-height: 100vh;
+}
+
+/* Main content card styling */
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem; /* Rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 2.5rem; /* Increased padding */
+    width: 100%;
+    max-width: 48rem; /* Wider card for better content flow */
+    position: relative; /* For positioning the logout button inside, if desired */
+    margin-top: 5rem; /* Push down to make space for top-right logout */
+    margin-bottom: 2rem;
+}
+
+/* AI Interview Coach Title */
+.ai-interview-title {
+    font-size: 2.8rem; /* Larger font size */
+    font-weight: 900; /* Extra bold */
+    margin-bottom: 2.5rem; /* More space below title */
+    background-image: linear-gradient(to right, #4a90e2, #a855f7); /* Blue to purple gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 0.05em; /* Slightly increased letter spacing */
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #dc2626; /* Red-600 */
+    color: white;
+    padding: 0.75rem 1.5rem; /* Larger padding for button size */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-weight: 600; /* Semi-bold */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    position: absolute; /* Position relative to the nearest positioned ancestor (body or dashboard-background if absolute on body) */
+    top: 1.5rem; /* From top edge */
+    right: 1.5rem; /* From right edge */
+    box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3); /* Soft red shadow */
+    z-index: 10; /* Ensure it's above other content */
+}
+
+.logout-button:hover {
+    background-color: #b91c1c; /* Red-700 on hover */
+    transform: translateY(-1px); /* Slight lift effect */
+}
+
+.logout-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.4); /* Focus ring */
+}
+
+/* Input Fields (Role, Experience, Answer) */
+.custom-input {
+    width: 100%;
+    padding: 1rem; /* Larger padding for input fields */
+    margin-bottom: 1.5rem; /* More space between text boxes */
+    border: 1px solid #cbd5e1; /* Gray-300 */
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.custom-input:focus {
+    outline: none;
+    border-color: #3b82f6; /* Blue-500 */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Focus ring */
+}
+
+/* Button general style (Start, Submit, End) */
+.custom-button {
+    width: 100%;
+    padding: 1rem; /* Larger padding for buttons */
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+    transform: translateY(-1px);
+}
+
+.custom-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Specific button colors */
+.start-interview-button {
+    background-color: #22c55e; /* Green-600 */
+    color: white;
+    margin-top: 1.5rem; /* Space below text boxes */
+}
+.start-interview-button:hover {
+    background-color: #16a34a; /* Green-700 */
+}
+
+.submit-answer-button {
+    background-color: #22c55e; /* Green-600 */
+    color: white;
+}
+.submit-answer-button:hover {
+    background-color: #16a34a; /* Green-700 */
+}
+
+.end-interview-button {
+    background-color: #ef4444; /* Red-500 */
+    color: white;
+}
+.end-interview-button:hover {
+    background-color: #dc2626; /* Red-600 */
+}
+
+/* Information/Feedback boxes */
+.info-box {
+    background-color: #e0f7fa; /* Light blue */
+    border: 1px solid #b2ebf2; /* Slightly darker blue border */
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.error-message {
+    color: #ef4444; /* Red-500 */
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    font-weight: 500;
+}
+
+.feedback-box {
+    background-color: #fffde7; /* Light yellow */
+    border-left: 5px solid #ffd700; /* Gold border */
+    color: #795548; /* Brownish text for good contrast */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    text-align: left;
+    font-size: 0.95rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+
+/* Styles for the Voice Input Button */
+.voice-input-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px; /* Added spacing */
+    width: 100%; /* Make it full width like other buttons */
+}
+
+.voice-input-button:hover {
+    background-color: #45a049;
+}
+
+.voice-input-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Style for when recording is active */
+.voice-input-button.recording-active {
+    background-color: #f44336; /* Red when recording */
+    animation: pulse-red 1.5s infinite; /* Add a pulsating effect */
+}
+
+.voice-input-button.recording-active:hover {
+    background-color: #da190b;
+}
+
+/* Keyframe animation for pulsating effect */
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(244, 67, 54, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(244, 67, 54, 0);
+    }
+}
+
+/* Ensure the submit/end buttons have some top margin as well */
+.flex.flex-col.sm\:flex-row.gap-3 {
+    margin-top: 15px; /* Adjust as needed */
+}
+
+/* General button styles if not already defined globally or by Tailwind */
+.custom-button {
+    /* Example: */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 0.375rem; /* Equivalent to Tailwind's rounded-md */
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.start-interview-button {
+    background-color: #3b82f6; /* Blue-600 */
+    color: white;
+}
+.start-interview-button:hover {
+    background-color: #2563eb; /* Blue-700 */
+}
+
+.submit-answer-button {
+    background-color: #10b981; /* Green-500 */
+    color: white;
+}
+.submit-answer-button:hover {
+    background-color: #059669; /* Green-600 */
+}
+
+.end-interview-button {
+    background-color: #ef4444; /* Red-500 */
+    color: white;
+}
+.end-interview-button:hover {
+    background-color: #dc2626; /* Red-600 */
+}
+
+/* Custom input styles for consistency */
+.custom-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't add to total width */
+}
+
+.info-box, .feedback-box {
+    background-color: #e0f2fe; /* Light blue */
+    border: 1px solid #90cdf4; /* Medium blue */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.error-message {
+    color: #ef4444; /* Red-500 */
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.live-transcription-preview {
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-style: italic;
+    color: #333;
+    text-align: left;
+}

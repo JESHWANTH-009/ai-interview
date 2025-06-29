@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# Dependency directories (from your local)
+node_modules/
+venv/
+
+# Environment variables (from your local)
+.env
+
+# Build output directory (from your local)
+dist/
+build/
+
+# Other common ignore patterns (potentially from remote)
+*.log
+.DS_Store
+# Add any other specific remote ignores here if they are useful
